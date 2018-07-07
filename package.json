@@ -1,0 +1,22 @@
+{
+  "name": "myfitnesspal",
+  "version": "1.0.0",
+  "description": "graphical interface for myfitnesspal data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seppar93/visualizeMe.git"
+  },
+  "author": "Sepehr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seppar93/visualizeMe/issues"
+  },
+  "homepage": "https://github.com/seppar93/visualizeMe#readme",
+  "dependencies": {
+    "mfp": "^0.7.0"
+  }
+}
