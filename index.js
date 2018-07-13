@@ -70,7 +70,7 @@ setTimeout(function () {
 
 
 
-  fs.writeFileSync("example.js",'var profileData='+JSON.stringify(dataSet, null ,2));
+  fs.writeFileSync("dataset.js",'var profileData='+JSON.stringify(dataSet, null ,2));
 
 },1000);
 
