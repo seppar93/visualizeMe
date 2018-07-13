@@ -18,6 +18,9 @@
 /////////////////////////////////DATA RETREVAL FUNCTION/////////////////////////
 
 function getData(dataset,getFunction) {
+  // if ("data" in dataset) {
+  //   return dataset["data"];
+  // }
   for(let key in dataset) {
     if (key === "data") {
       let info = dataset[key];

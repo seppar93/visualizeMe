@@ -4,7 +4,8 @@
   "description": "graphical interface for myfitnesspal data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "brain.js": "^1.2.2",
     "es6-promise": "^4.2.4",
     "isomorphic-fetch": "^2.2.1",
-    "mfp": "^0.7.0"
+    "mfp": "^0.7.0",
+    "serve": "^9.2.0"
   }
 }
