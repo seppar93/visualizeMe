@@ -4,7 +4,10 @@
    <meta charset="utf-8">
    <title>VisualizeMe</title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+   <script
+   src="https://code.jquery.com/jquery-3.3.1.js"
+   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+   crossorigin="anonymous"></script>
  </head>
 
  <body>
@@ -40,23 +43,29 @@
   <br>
   <!-- <canvas id="myChart" width="300" height="300"></canvas> -->
   <section>
-    <canvas id="calories" width="300" height="300"></canvas>
+    <canvas id="stacked-bar-graph" width="300" height="300"></canvas>
 
   </section>
 
   <section>
-    <canvas id="pie" width="300" height="300"></canvas>
+    <canvas id="macros-pie-bar" width="300" height="300"></canvas>
   </section>
 
   <section>
-    <canvas id="time" width="300" height="300"></canvas>
+    <canvas id="calorie-line-graph" width="300" height="300"></canvas>
   </section>
 
+  <section>
+    <canvas id="calorie-carbs-graph" width="300" height="300"></canvas>
+  </section>
 
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+  <section>
+    <canvas id="calorie-protein-graph" width="300" height="300"></canvas>
+  </section>
+
+  <section>
+    <canvas id="calorie-fat-graph" width="300" height="300"></canvas>
+  </section>
 
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>

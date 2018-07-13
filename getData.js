@@ -14,7 +14,8 @@
 //   }
 //   return cal;
 // }
-
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////DATA RETREVAL FUNCTION/////////////////////////
 
 function getData(dataset,getFunction) {
   for(let key in dataset) {
@@ -24,6 +25,10 @@ function getData(dataset,getFunction) {
     }
   }
 }
+
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////INPUT FUNCTIONS////////////////////////////////
+
 
 function getCalories(info) {
   let cal = [];
@@ -86,36 +91,17 @@ function sum(arr) {
   return arr.reduce((accum, curr) => accum + curr);
 }
 
-console.log(sum(getData(profileData,getCalories)));
-
-// var ctx = document.getElementById('myChart').getContext('2d');
-// var myChart = new Chart(ctx, {
-//   type: 'line',
-//   data: {
-//     labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-//     datasets: [{
-//       label: 'Calories',
-//       data: getData(profileData,getCalories), //[1403, 2175, 1615, 1768, 1749, 3020, 806],
-//       backgroundColor: "rgba(153,255,51,0.4)"
-//     }, {
-//       label: 'protien',
-//       data: getData(profileData,getProtein), //[108, 139, 139, 147, 48, 16, 113],
-//       backgroundColor: "rgba(255,153,0,0.4)"
-//     },{
-//       label: 'carbs',
-//       data: getData(profileData,getCarbs), //[81, 92, 97, 147, 27, 250, 113],
-//       backgroundColor: "rgba(260,200,60,0.4)"
-//     }, {
-//       label: 'fat',
-//       data: getData(profileData,getFats), //[72, 150, 108, 102, 127, 191, 113],
-//       backgroundColor: "rgba(63, 63, 191,0.4)"
-//     }]
-//   }
-// });
+// console.log(sum(getData(profileData,getCalories)));
 
 ////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////GRAPHS/////////////////////////////////////////
 
-var ctx = document.getElementById("calories"); // whatever name we are going to give the calories div
+
+
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////STACKED CALORIE BAR GRAPH//////////////////////
+
+var ctx = document.getElementById("stacked-bar-graph"); // whatever name we are going to give the calories div
 var caloriesChart = new Chart(ctx, {
 type: 'bar',  //NOTE: ideally we can make this tied to a dropdown menu on the HTML to change chart type
 data: {
@@ -138,8 +124,10 @@ scales: {
 }
 });
 
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////MACROS PIE GRAPH///////////////////////////////
 
-var ctx = document.getElementById("pie");
+var ctx = document.getElementById("macros-pie-bar");
 var myChart = new Chart(ctx, {
 //type of chart
 type: 'pie',
@@ -171,9 +159,11 @@ options: {
 }
 });
 
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////CALORIES LINE GRAPH///////////////////////////////
 
 
-var ctx = document.getElementById("time"); // <-- div for area hold weight line graph goes in here
+var ctx = document.getElementById("calorie-line-graph"); // <-- div for area hold weight line graph goes in here
 var caloriesChart = new Chart(ctx, {
     type: 'line', //type of chart
     data: {
@@ -186,3 +176,57 @@ var caloriesChart = new Chart(ctx, {
     }]
   },
 });
+
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////CARBS LINE GRAPH///////////////////////////////
+
+var ctx = document.getElementById("calorie-carbs-graph"); // <-- div for area hold weight line graph goes in here
+var caloriesChart = new Chart(ctx, {
+    type: 'line', //type of chart
+    data: {
+      labels : getData(profileData,getDate),  //variable for dates
+      datasets: [ {
+        label: "calories",//name of chart
+        backgroundColor: 'rgba(rgb(0,250,154,0.4)',
+        borderColor: 'rgba(rgb(0,250,154,1)',
+        data: getData(profileData,getCarbs) ,     //<--the weight variable pulled from the JSON loop
+    }]
+  },
+});
+
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////PROTIEN LINE GRAPH/////////////////////////////
+var ctx = document.getElementById("calorie-protein-graph"); // <-- div for area hold weight line graph goes in here
+var caloriesChart = new Chart(ctx, {
+    type: 'line', //type of chart
+    data: {
+      labels : getData(profileData,getProtein),  //variable for dates
+      datasets: [ {
+        label: "calories",//name of chart
+        backgroundColor: 'rgba(rgb(0,250,154,0.4)',
+        borderColor: 'rgba(rgb(0,250,154,1)',
+        data: getData(profileData,getCarbs) ,     //<--the weight variable pulled from the JSON loop
+    }]
+  },
+});
+
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////FAT LINE GRAPH/////////////////////////////////
+var ctx = document.getElementById("calorie-fat-graph"); // <-- div for area hold weight line graph goes in here
+var caloriesChart = new Chart(ctx, {
+    type: 'line', //type of chart
+    data: {
+      labels : getData(profileData,getProtein),  //variable for dates
+      datasets: [ {
+        label: "calories",//name of chart
+        backgroundColor: 'rgba(rgb(0,250,154,0.4)',
+        borderColor: 'rgba(rgb(0,250,154,1)',
+        data: getData(profileData,getFats) ,     //<--the weight variable pulled from the JSON loop
+    }]
+  },
+});
+
+
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////BRAIN.JS///////////////////////////////////////
+console.log(Math.floor((profileData.trainedOuput.cal) * 100) + "%");
