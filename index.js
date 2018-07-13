@@ -1,16 +1,38 @@
-import brain from 'brain.js';
+const brain = require( 'brain.js');
 var net = new brain.NeuralNetwork();
 
 var mfp = require("mfp");
 const fs = require('fs');
 
-var dataSet;
-mfp.fetchDateRange('SepehrP', '2017-09-15', '2017-09-22', ['calories', 'protein', 'carbs', 'fat'], function(data){
+
+mfp.fetchDateRange('SepehrP', '2017-09-15', '2017-09-22', ['calories', 'protein', 'carbs', 'fat'], function(dataSet){
   // console.log(data['data']);
-  return dataSet = data
+
+
+  let calories = getData(dataSet,getCalories)
+  // console.log(dataTrain(calories,2000));
+  net.train(dataTrain(calories,2000));
+  var output = net.run({ calories: 1800});
+  // console.log(output);
+
+  dataSet.trainedOuput = output;
+
+
+
+
+
+
+
+
+
+
+
+
+
+  fs.writeFileSync("dataset.js",'var profileData='+JSON.stringify(dataSet, null ,2));
 });
 
-setTimeout(function () {
+// setTimeout(function () {
   // console.log(dataSet);
 
   function getData(dataset,getFunction) {
@@ -50,29 +72,8 @@ setTimeout(function () {
     return whatIneed;
 
   }
-  let calories = getData(dataSet,getCalories)
-  // console.log(dataTrain(calories,2000));
-  net.train(dataTrain(calories,2000));
-  var output = net.run({ calories: 1800});
-  // console.log(output);
 
-  dataSet.trainedOuput = output;
-
-
-
-
-
-
-
-
-
-
-
-
-
-  fs.writeFileSync("dataset.js",'var profileData='+JSON.stringify(dataSet, null ,2));
-
-},1000);
+// },1000);
 
 
 // import * as data from "example.json";
