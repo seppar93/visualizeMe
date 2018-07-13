@@ -186,7 +186,7 @@ var caloriesChart = new Chart(ctx, {
     data: {
       labels : getData(profileData,getDate),  //variable for dates
       datasets: [ {
-        label: "calories",//name of chart
+        label: "carbs",//name of chart
         backgroundColor: 'rgba(rgb(0,250,154,0.4)',
         borderColor: 'rgba(rgb(0,250,154,1)',
         data: getData(profileData,getCarbs) ,     //<--the weight variable pulled from the JSON loop
@@ -202,10 +202,10 @@ var caloriesChart = new Chart(ctx, {
     data: {
       labels : getData(profileData,getProtein),  //variable for dates
       datasets: [ {
-        label: "calories",//name of chart
+        label: "protien",//name of chart
         backgroundColor: 'rgba(rgb(0,250,154,0.4)',
         borderColor: 'rgba(rgb(0,250,154,1)',
-        data: getData(profileData,getCarbs) ,     //<--the weight variable pulled from the JSON loop
+        data: getData(profileData,getProtein) ,     //<--the weight variable pulled from the JSON loop
     }]
   },
 });
@@ -218,7 +218,7 @@ var caloriesChart = new Chart(ctx, {
     data: {
       labels : getData(profileData,getProtein),  //variable for dates
       datasets: [ {
-        label: "calories",//name of chart
+        label: "fats",//name of chart
         backgroundColor: 'rgba(rgb(0,250,154,0.4)',
         borderColor: 'rgba(rgb(0,250,154,1)',
         data: getData(profileData,getFats) ,     //<--the weight variable pulled from the JSON loop
