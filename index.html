@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>VisualizeMe</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <head>
+   <meta charset="utf-8">
+   <title>VisualizeMe</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  </head>
-  <body>
+ </head>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">VisualizeMe</a>
-    
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Calories<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Proteins</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Carbs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"href="#">Fats</a>
-          </li>
-        </ul>
-      </div>
+ <body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+     <a class="navbar-brand" href="#">VisualizeMe</a>
 
-    </nav>
-    
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav">
+         <li class="nav-item">
+           <a class="nav-link" href="#">Calories<span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Proteins</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Carbs</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link"href="#">Fats</a>
+         </li>
+       </ul>
+     </div>
+
+   </nav>
 
 
-    <script src="index.js" charset="utf-8"></script>
-  </body>
+
+
+
+  <br>
+  <!-- <canvas id="myChart" width="300" height="300"></canvas> -->
+  <section>
+    <canvas id="calories" width="300" height="300"></canvas>
+
+  </section>
+
+  <section>
+    <canvas id="pie" width="300" height="300"></canvas>
+  </section>
+
+  <section>
+    <canvas id="time" width="300" height="300"></canvas>
+  </section>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+ <script src="getData.js" charset="utf-8"></script>
+ <script src="example.js" charset="utf-8"></script>
+ <script src="getData.js" charset="utf-8"></script>
+   <script src="index.js" charset="utf-8"></script>
+
+
+ </body>
 </html>
