@@ -4,34 +4,40 @@
    <meta charset="utf-8">
    <title>VisualizeMe</title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
 
  </head>
 
- <body>
-   <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-     <a class="navbar-brand" href="#">VisualizeMe</a>
+ <body><script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarNav">
-       <ul class="navbar-nav">
-         <li class="nav-item">
-           <a class="nav-link" href="#">Calories<span class="sr-only">(current)</span></a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="#">Proteins</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="#">Carbs</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link"href="#">Fats</a>
-         </li>
-       </ul>
-     </div>
+</head>
 
-   </nav>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top ">
+    <a class="navbar-brand" href="#">VisualizeMe</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#calories">Calories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#pie">Proteins</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#time">Calories</a>
+          </li><li class="nav-item">
+            <a class="nav-link" href="#macros">Calories</a>
+      
+      </ul>
+    </div>
+
+  </nav>
 
 
 
@@ -39,9 +45,11 @@
 
   <br>
   <!-- <canvas id="myChart" width="300" height="300"></canvas> -->
+
+  
+
   <section>
     <canvas id="calories" width="300" height="300"></canvas>
-
   </section>
 
   <section>
@@ -50,6 +58,10 @@
 
   <section>
     <canvas id="time" width="300" height="300"></canvas>
+  </section>
+
+  <section>
+    <canvas id="macros" width="300" height="300"></canvas>
   </section>
 
 
@@ -67,4 +79,36 @@
 
 
  </body>
+ <script>
+
+
+$('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { 
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); 
+            $target.focus(); 
+          };
+        });
+      }
+    }
+  });
+ </script>
 </html>

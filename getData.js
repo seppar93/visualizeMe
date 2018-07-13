@@ -115,16 +115,16 @@ console.log(sum(getData(profileData,getCalories)));
 
 ////////////////////////////////////////////////////////////////////////////////
 
-var ctx = document.getElementById("calories"); // whatever name we are going to give the calories div
+var ctx = document.getElementById("calories"); 
 var caloriesChart = new Chart(ctx, {
-type: 'bar',  //NOTE: ideally we can make this tied to a dropdown menu on the HTML to change chart type
+type: 'bar',  
 data: {
-  labels : getData(profileData,getDate),  //the variable pulled from the JSON loop
+  labels : getData(profileData,getDate),  
   datasets: [ {
     label: "Calorie example",
-    backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
-    data: getData(profileData,getCalories),     //the other variable pulled from the JSON loop
+    backgroundColor: 'rgba(255,99,132,0.4)',
+    borderColor: 'rgba(255,99,132,1)',
+    data: getData(profileData,getCalories), 
 }]
 },
 options: {
@@ -141,48 +141,74 @@ scales: {
 
 var ctx = document.getElementById("pie");
 var myChart = new Chart(ctx, {
-//type of chart
 type: 'pie',
 data: {
     labels: ["Proteins", "Carbs", "Fats"],
     datasets: [{
         label: 'Weekly Intake',
-        //values for chart to display
         data: [sum(getData(profileData,getProtein)), sum(getData(profileData,getCarbs)), sum(getData(profileData,getFats))],
-        //colours used for graphing labels above
         backgroundColor: [
-            'rgba(153,255,51,0.4)',
-            'rgba(255,153,0,0.4)',
-            'rgba(260,200,60,0.4)',
-            'rgba(63, 63, 191,0.4)',
+            'rgba(153,255,51,0.3)',
+            'rgba(255,153,0,0.3)',
+            'rgba(260,200,60,0.3)'
         ],
-        //border colors used for the labels above
         borderColor: [
             'rgba(153,255,51,1)',
-            'rgba(255,153,0, 1)',
-            'rgba(260,200,60, 1)',
-            'rgba(63, 63, 191,1)',
+            'rgba(255,153,0,1)',
+            'rgba(260,200,60,1)'
         ],
         borderWidth: 1
     }]
 },
 options: {
-    //if we wanted to add graph lines, we would do so in here.
+
 }
 });
 
-
-
-var ctx = document.getElementById("time"); // <-- div for area hold weight line graph goes in here
+var ctx = document.getElementById("time"); 
 var caloriesChart = new Chart(ctx, {
-    type: 'line', //type of chart
+    type: 'line', 
     data: {
-      labels : getData(profileData,getDate),  //variable for dates
+      labels : getData(profileData,getDate),  
       datasets: [ {
-        label: "calories",//name of chart
-        backgroundColor: 'rgba(rgb(0,250,154,0.4)',
-        borderColor: 'rgba(rgb(0,250,154,1)',
-        data: getData(profileData,getCalories) ,     //<--the weight variable pulled from the JSON loop
+        label: "calories",
+        backgroundColor: 'rgba(0,250,154,0.4)',
+        borderColor: 'rgba(0,250,154,1)',
+        data: getData(profileData,getCalories) ,    
     }]
   },
+});
+
+var ctx = document.getElementById("macros"); 
+var caloriesChart = new Chart(ctx, {
+type: 'bar',  
+data: {
+  labels : getData(profileData,getDate), 
+  datasets: [  {
+       label: 'protein',
+       data: getData(profileData,getProtein), 
+      backgroundColor: "rgba(240,152,38,0.4)",
+      borderColor: "rgba(240,152,38,1)"
+     },{
+       label: 'carbs', 
+      data: getData(profileData,getCarbs), 
+       backgroundColor: "rgba(51,38,240,0.4)",
+       borderColor: "rgba(51,51,240,1)",
+     }, {
+       label: 'fat',
+       data: getData(profileData,getFats), 
+       backgroundColor: "rgba(38,227,240,0.4)",
+       borderColor: "rgba(38,227,240,1)",
+}]
+},
+options: {
+  scales: {
+    yAxes: [{
+      stacked: true
+    }],
+    xAxes: [{
+      stacked: true
+    }]
+  }
+}
 });
