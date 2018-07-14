@@ -14,6 +14,63 @@
 //   }
 //   return cal;
 // }
+
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////API DATA///////////////////////////////////////
+// var foodName;
+// var foodNutrientValue;
+
+var nutrientLookup = nutrientSearch()
+function nutrientSearch(){
+    $('#foodSearch').on('click', function(){
+        var APIKey = 'api_key=AChcEWV59WuOEXHT383nb04fkKXXtobx5EhmViQB';
+        var nutrientChoice = 'nutrients=' + $('#nutrient').val()
+        var foodGroup = 'fg=' + $('#foodGroup').val()
+        var queryURL = 'https://api.nal.usda.gov/ndb/nutrients/?format=json&' + APIKey + '&' + nutrientChoice + '&' + foodGroup + '&subset=1&sort=c&max=5'
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+            }).then(function(response) {
+                var nutritionArray = response.report.foods
+                var nutritionNameArray = [];
+                var nutrientValueArray = [];
+                for (i in nutritionArray){
+                    nutritionNameArray.push(nutritionArray[i].name);
+                }
+                for (j = 0; j < nutritionArray.length; j++){
+                    var nutritionInfo = nutritionArray[j].nutrients
+                    for (k in nutritionInfo){
+                        nutrientValueArray.push(nutritionInfo[k].value);
+                    }
+                }
+///////////////////////////////API Graph////////////////////////////////////////
+                  var ctx = document.getElementById("api-bar-graph"); // whatever name we are going to give the calories div
+                  var caloriesChart = new Chart(ctx, {
+                    type: 'bar',  //NOTE: ideally we can make this tied to a dropdown menu on the HTML to change chart type
+                    data: {
+                      labels : nutritionNameArray,  //the variable pulled from the JSON loop
+                      datasets: [ {
+                        label: "Calorie example",
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: nutrientValueArray,     //the other variable pulled from the JSON loop
+                      }]
+                    },
+                    options: {
+                      scales: {
+                        yAxes: [{
+                          ticks: {
+                            beginAtZero: true
+                          }
+                        }]
+                      }
+                    }
+                  });
+                });
+              })
+            }
+
+
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////DATA RETREVAL FUNCTION/////////////////////////
 
@@ -99,8 +156,6 @@ function sum(arr) {
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////GRAPHS/////////////////////////////////////////
 
-
-
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////STACKED CALORIE BAR GRAPH//////////////////////
 
@@ -108,24 +163,37 @@ var ctx = document.getElementById("stacked-bar-graph"); // whatever name we are 
 var caloriesChart = new Chart(ctx, {
 type: 'bar',  //NOTE: ideally we can make this tied to a dropdown menu on the HTML to change chart type
 data: {
-  labels : getData(profileData,getDate),  //the variable pulled from the JSON loop
-  datasets: [ {
-    label: "Calorie example",
-    backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
-    data: getData(profileData,getCalories),     //the other variable pulled from the JSON loop
-}]
-},
-options: {
-scales: {
+  labels : getData(profileData,getDate),
+  datasets: [{
+       label: 'protein',
+       data: getData(profileData,getProtein),
+      backgroundColor: "rgba(240,152,38,0.4)",
+      borderColor: "rgba(240,152,38,1)"
+     },{
+       label: 'carbs',
+      data: getData(profileData,getCarbs),
+       backgroundColor: "rgba(51,38,240,0.4)",
+       borderColor: "rgba(51,51,240,1)",
+     }, {
+       label: 'fat',
+       data: getData(profileData,getFats),
+       backgroundColor: "rgba(38,227,240,0.4)",
+       borderColor: "rgba(38,227,240,1)",
+     }]
+   },
+  options: {
+  scales: {
     yAxes: [{
-        ticks: {
-            beginAtZero: true
-        }
+      stacked: true
+    }],
+    xAxes: [{
+      stacked: true
     }]
-}
+  }
 }
 });
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////MACROS PIE GRAPH///////////////////////////////
@@ -190,8 +258,8 @@ var caloriesChart = new Chart(ctx, {
       labels : getData(profileData,getDate),  //variable for dates
       datasets: [ {
         label: "carbs",//name of chart
-        backgroundColor: 'rgba(rgb(0,250,154,0.4)',
-        borderColor: 'rgba(rgb(0,250,154,1)',
+        backgroundColor: 'rgba(0,250,154,0.4)',
+        borderColor: 'rgba(0,250,154,1)',
         data: getData(profileData,getCarbs) ,     //<--the weight variable pulled from the JSON loop
     }]
   },
@@ -206,8 +274,8 @@ var caloriesChart = new Chart(ctx, {
       labels : getData(profileData,getProtein),  //variable for dates
       datasets: [ {
         label: "protien",//name of chart
-        backgroundColor: 'rgba(rgb(0,250,154,0.4)',
-        borderColor: 'rgba(rgb(0,250,154,1)',
+        backgroundColor: 'rgba(0,250,154,0.4)',
+        borderColor: 'rgba(0,250,154,1)',
         data: getData(profileData,getProtein) ,     //<--the weight variable pulled from the JSON loop
     }]
   },
@@ -228,6 +296,39 @@ var caloriesChart = new Chart(ctx, {
     }]
   },
 });
+
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////API Graph/////////////////////////////////
+
+// var ctx = document.getElementById("api-calorie-graph"); // whatever name we are going to give the calories div
+// var caloriesChart = new Chart(ctx, {
+// type: 'bar',  //NOTE: ideally we can make this tied to a dropdown menu on the HTML to change chart type
+// data: {
+//   labels : foodName,  //the variable pulled from the JSON loop
+//   datasets: [ {
+//     label: "Calorie example",
+//     backgroundColor: 'rgb(255, 99, 132)',
+//     borderColor: 'rgb(255, 99, 132)',
+//     data: foodNutrientValue,     //the other variable pulled from the JSON loop
+// }]
+// },
+// options: {
+// scales: {
+//     yAxes: [{
+//         ticks: {
+//             beginAtZero: true
+//         }
+//     }]
+// }
+// }
+// });
+
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////API////////////////////////////////////////////
+
+
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -4,6 +4,7 @@
    <meta charset="utf-8">
    <title>VisualizeMe</title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="CSS/style.css">
    <script
    src="https://code.jquery.com/jquery-3.3.1.js"
    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -11,7 +12,7 @@
  </head>
 
  <body>
-   <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top ">
      <a class="navbar-brand" href="#">VisualizeMe</a>
 
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,27 +21,109 @@
      <div class="collapse navbar-collapse" id="navbarNav">
        <ul class="navbar-nav">
          <li class="nav-item">
-           <a class="nav-link" href="#">Calories<span class="sr-only">(current)</span></a>
+           <a class="nav-link" href="#calories">Calories<span class="sr-only"></span></a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#">Proteins</a>
+           <a class="nav-link" href="#protien">Proteins</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#">Carbs</a>
+           <a class="nav-link" href="#carbs">Fats</a>
+           <li class="nav-item">
+              <a class="nav-link" href="#carbs">Carbs</a>
+              <li class="nav-item">
+                  <a class="nav-link" href="#carbs">Macros</a>
          </li>
-         <li class="nav-item">
-           <a class="nav-link"href="#">Fats</a>
-         </li>
+
        </ul>
      </div>
 
    </nav>
+   <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">visualize<strong>Me</strong></h1>
+        <p class="lead">Come visualize and better understand your health and nutrition data</p>
+      </div>
+    </div>
+
+<br>
+
+<div class="container">
+
+<br>
+<div class="row featurette text-center" id="aboutUs">
+  <div class="col-md-12">
+    <h2 class="featurette-heading"><strong>What is VisualizeMe?</strong></h2> <span class="text-muted">more text.</span>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+</div>
+<br>
+<hr class="featurette-divider">
+<br>
+<div class="row featurette" id="protien">
+    <div class="col-md-5 pull-md-7">
+        <img class="featurette-image img-fluid mx-auto" src="./CSS/pie.PNG" alt="Generic placeholder image">
+      </div>
+  <div class="col-md-7 push-md-5">
+    <h2 class="featurette-heading" >Protein</h2> <span class="text-muted">more text.</span>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+
+</div>
+<br>
+<hr class="featurette-divider" id="fats">
+<br>
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">Fats</h2> <span class="text-muted">more text.</span>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+  <div class="col-md-5">
+    <img class="featurette-image img-fluid mx-auto" src="./CSS/line.PNG" alt="Generic placeholder image">
+  </div>
+</div>
+<br>
+<hr class="featurette-divider">
+<div class="row featurette" id="carbs">
+    <div class="col-md-5 pull-md-7">
+        <img class="featurette-image img-fluid mx-auto" src="" alt="Generic placeholder image">
+      </div>
+  <div class="col-md-7 push-md-5">
+    <h2 class="featurette-heading" >Carbs</h2> <span class="text-muted">more text.</span>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+
+</div>
+<br>
+<hr class="featurette-divider">
+<br>
+<div class="row featurette" id="macros">
+  <div class="col-md-7">
+    <h2 class="featurette-heading" >Macros</h2> <span class="text-muted">more text.</span>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+  <div class="col-md-5">
+      <img class="featurette-image img-fluid mx-auto" src="./CSS/stacked.PNG" alt="Generic placeholder image">
+  </div>
+</div>
+<br>
+<hr class="featurette-divider">
+</div>
+  <br>
+  <br>
+
+
+
 
 
 
 
 
   <br>
+  <!-- <section>
+    <canvas id="api-calorie-graph" width="300" height="300"></canvas>
+  </section> -->
+
+
   <section>
     <canvas id="stacked-bar-graph" width="300" height="300"></canvas>
 
@@ -66,12 +149,98 @@
     <canvas id="calorie-fat-graph" width="300" height="300"></canvas>
   </section>
 
+  <section>
+    <canvas id="api-bar-graph" width="300" height="300"></canvas>
+  </section>
+
+<!-- ///////////////////////////////API 1//////////////////////////////////  -->
+<section class="API">
+  <!--Nutrient Search API-->
+      <div class="row">
+          <label for="">Nutrient:</label>
+          <select id="nutrient" name="nutrient1" class="n1" value=""  title="Select the nutrient to report">
+              <option value="">Select a nutrient</option>
+                  <option value="208">Energy (kcal)</option>
+                  <option value="203">Protein (g)</option>
+                  <option value="204">Fat (g)</option>
+                  <option value="205">Carbohydrates (g)</option>
+          </select>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-6">
+          <label for="" fg="">Food Groups:</label>
+
+          <select class="fg" id="foodGroup" name="food-group" >
+          <option value="">Select a Food Type</option>
+          <option value="1800">Baked Products</option>
+          <option value="1300">Beef Products</option>
+          <option value="1400">Beverages</option>
+          <option value="0800">Breakfast Cereals</option>
+          <option value="2000">Cereal Grains and Pasta</option>
+          <option value="0100">Dairy and Egg Products</option>
+          <option value="1500">Finfish and Shellfish Products</option>
+          <option value="0900">Fruits and Fruit Juices</option>
+          <option value="1700">Lamb, Veal, and Game Products</option>
+          <option value="1600">Legumes and Legume Products</option>
+          <option value="1200">Nut and Seed Products</option>
+          <option value="1000">Pork Products</option>
+          <option value="0500">Poultry Products</option>
+          <option value="2300">Snacks</option>
+          <option value="1100">Vegetables and Vegetable Products</option>
+          </select>
+      </div>
+
+      <div class ="row">
+          <button id="foodSearch">Search</button>
+      </div>
+</section>
+
+
+
+<!-- ///////////////////////////////API///////////////////////////////////////  -->
+
+<!-- ///////////////////////////////API///////////////////////////////////////  -->
+
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
  <script src="getData.js" charset="utf-8"></script>
  <script src="dataset.js" charset="utf-8"></script>
  <script src="getData.js" charset="utf-8"></script>
-   <script src="index.js" charset="utf-8"></script>
+ <script src="index.js" charset="utf-8"></script>
+
+ <script>
+
+
+$('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 900, function() {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) {
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            $target.focus();
+          };
+        });
+      }
+    }
+  });
+ </script>
 
 
  </body>
