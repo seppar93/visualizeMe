@@ -64,7 +64,7 @@ var caloriesChart = new Chart(ctx, {
     data: {
       labels : dateToGraph,  //the variable pulled from the JSON loop
       datasets: [ {
-        label: "Calorie example",
+        label: "Calories",
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
         data: caloriesToGraph,     //the other variable pulled from the JSON loop
@@ -80,14 +80,14 @@ var caloriesChart = new Chart(ctx, {
     }
 }
 });
-var ctx = document.getElementById("pie");
+var ctx = document.getElementById("pieMacros");
 var myChart = new Chart(ctx, {
     //type of chart
     type: 'pie',
     data: {
         labels: ["Calories", "Proteins", "Carbs", "Fats"],
         datasets: [{
-            label: 'Weekly Intake',
+            label: 'Daily Intake',
             //values for chart to display
             data: [myArray[0].calories, myArray[0].protein, myArray[0].carbs, myArray[0].fat],
             //colours used for graphing labels above
