@@ -5,9 +5,11 @@ var mfp = require("mfp");
 const fs = require('fs');
 
 
-mfp.fetchDateRange('SepehrP', '2017-09-15', '2017-09-22', ['calories', 'protein', 'carbs', 'fat'], function(dataSet){
-  // console.log(data['data']);
 
+
+mfp.fetchDateRange('Charoolz', '2018-01-15', '2018-07-01', ['calories', 'protein', 'carbs', 'fat'], function(dataSet){
+  // console.log(data['data']);
+  console.log(dataSet);
 
   let calories = getData(dataSet,getCalories)
   // console.log(dataTrain(calories,2000));

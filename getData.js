@@ -271,7 +271,7 @@ var ctx = document.getElementById("calorie-protein-graph"); // <-- div for area 
 var caloriesChart = new Chart(ctx, {
     type: 'line', //type of chart
     data: {
-      labels : getData(profileData,getProtein),  //variable for dates
+      labels : getData(profileData,getDate),  //variable for dates
       datasets: [ {
         label: "protien",//name of chart
         backgroundColor: 'rgba(0,250,154,0.4)',
@@ -287,7 +287,7 @@ var ctx = document.getElementById("calorie-fat-graph"); // <-- div for area hold
 var caloriesChart = new Chart(ctx, {
     type: 'line', //type of chart
     data: {
-      labels : getData(profileData,getProtein),  //variable for dates
+      labels : getData(profileData,getDate),  //variable for dates
       datasets: [ {
         label: "fats",//name of chart
         backgroundColor: 'rgba(0,250,154,0.4)',
