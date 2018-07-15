@@ -241,8 +241,8 @@ var caloriesChart = new Chart(ctx, {
       labels : getData(profileData,getDate),  //variable for dates
       datasets: [ {
         label: "calories",//name of chart
-        backgroundColor: 'rgba(rgb(0,250,154,0.4)',
-        borderColor: 'rgba(rgb(0,250,154,1)',
+        backgroundColor: 'rgba(0,250,154,0.4)',
+        borderColor: 'rgba(0,250,154,1)',
         data: getData(profileData,getCalories) ,     //<--the weight variable pulled from the JSON loop
     }]
   },
@@ -290,8 +290,8 @@ var caloriesChart = new Chart(ctx, {
       labels : getData(profileData,getProtein),  //variable for dates
       datasets: [ {
         label: "fats",//name of chart
-        backgroundColor: 'rgba(rgb(0,250,154,0.4)',
-        borderColor: 'rgba(rgb(0,250,154,1)',
+        backgroundColor: 'rgba(0,250,154,0.4)',
+        borderColor: 'rgba(0,250,154,1)',
         data: getData(profileData,getFats) ,     //<--the weight variable pulled from the JSON loop
     }]
   },
@@ -326,9 +326,30 @@ var caloriesChart = new Chart(ctx, {
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////API////////////////////////////////////////////
 
+var recipeLookup = recipeSearch()
+function recipeSearch(){
+    $('#recipeSearch').on("click", function(){
+        var APIKey = '&app_key=0ada957d3714df14b9602bc7869a6178';
+        var applicationID = '&app_id=683d8f0f';
+        var q = $("#recipeQuery").val();
+        var queryURL = 'https://api.edamam.com/api/food-database/parser?ingr=' + q +APIKey + applicationID ;
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+            }).then(function(response) {
+            console.log(response.hints)
+            recipeArray = response.hints
+            console.log(recipeArray)
+            for (i=0; i < recipeArray.length; i++){
+                var recipeName = recipeArray[i].food.label
+                console.log(recipeName)  // x axis
+                var recipeNutrients = recipeArray[i].food.nutrients // yaxis
+                console.log(recipeNutrients)
 
-
-
+            }
+        })
+    })
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
