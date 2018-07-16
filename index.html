@@ -5,10 +5,7 @@
    <title>VisualizeMe</title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <link rel="stylesheet" href="CSS/style.css">
-   <script
-  src="https://code.jquery.com/jquery-3.3.1.slim.js"
-  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
-  crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="CSS/queries.css">
  </head>
 
  <body>
@@ -147,39 +144,65 @@
 <!--////////////////////////////// CONTACT FORM /////////////////////////////-->
 
 <!--////////////////////////////// NEURAL NETWORK ///////////////////////////-->
-
+<script type="text/javascript">
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
 <section class="nueral-network">
 
-<h1 id="result"></h1>
-
-  <div >
-    <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularise</p>
+<!-- <h1 id="result"></h1> -->
+<!--  card for nueral network -->
+<div class="card">
+  <div class="card-header">
+    NEURAL NETWORK
   </div>
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    Launch demo modal
-  </button>
+  <div class="card-body">
+    <h5 class="card-title">Have the forsight to know</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+    <!-- Modal inside of card -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+
+          <button type="button" class="btn btn-primary" name="button" data-toggle="modal" data-target="#APIModal">
+            Click me
           </button>
+          <div class="modal fade" id="APIModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>The probablity of you maintining your calorie limit is: </h5>
+                  <div class="moodal-body">
+                    <h4 id="result"></h4>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-deafult btn-primary" data-dismiss="modal" name="button"> close</button>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+
       </div>
+
     </div>
+
+
+
+
   </div>
+</div>
+
+
 </section>
 <!--////////////////////////////// NEURAL NETWORK ///////////////////////////-->
 
@@ -226,7 +249,6 @@
                  <div class="card-body">
                      <p class="text-center">Interested in seeing how many nutreints are in a food group?  Select a nutrient and food group from our drop down menu and press search.</p>
                      <hr>
-
 
                        <div class="container">
                          <div class="row">
@@ -282,35 +304,43 @@
 <!--/////////////////////////////// RECIPE API///////////////////////////////-->
 
 <section class="recipeApi">
-
   <div class="container">
-          <div class="card">
-              <div class="card-body">
-                  <p class="text-center">Search a food item below and find recipes for to satisfy your needs</p>
-                  <hr>
-
-              <div class="row">
-                      <div class="col-lg-2"></div>
-
-                      <div class="col-lg-8">
-                          <div class="form-group">
-                          <input type="text" class="form-control" id="recipeQuery" placeholder="search for recipes here...">
-                          </div>
-                      </div>
-                      </div>
-                          <br>
+         <div class="card">
+             <div class="card-body">
+                 <p class="text-center">Search a food item below and find recipes for to satisfy your needs</p>
+                 <hr>
 
              <div class="row">
+                     <div class="col-lg-2"></div>
 
-             <div class="col-sm-4"></div>
-                          <button id ="recipeSearch" class="btn btn-primary btn-lg col-sm-4"> Search for Recipe </button>
-                        </div>
-                        </div>
-                      </div>
-
-                  </div>
-                  </div>
-              </div>
+                     <div class="col-lg-8">
+                         <div class="form-group">
+                         <input type="text" class="form-control" id="recipeQuery" placeholder="search for recipes here...">
+                         </div>
+                     </div>
+                     </div>
+                         <br>
+                         <div class="row">
+                             <div class="col-sm-4"></div>
+                                   <button id="recipeSearch" type="button" class="btn btn-primary col-sm-4" name="button" data-toggle="modal" data-target="#recipeResult">
+                                     Search for Recipes
+                                   </button>
+                                   <div class="modal fade" id="recipeResult">
+                                     <div class="modal-dialog">
+                                       <div class="modal-content">
+                                         <div class="modal-header">
+                                           <h5>Here are your Choices </h5>
+                                           <div class="moodal-body">
+                                             <h4 id="recipeResult"></h4>
+                                             <div class="modal-footer">
+                                               <button type="button" class="btn btn-deafult btn-primary" data-dismiss="modal" name="button"> close</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                                 </div>
+                                </div>
+                              </div>
+                            </div>
           </div>
 
 </section>

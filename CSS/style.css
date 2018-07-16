@@ -13,7 +13,7 @@ html {
   font-size: 100% }
   @media only screen and (max-width: 75em) {
     html {
-      font-size: 50%; } }
+      font-size: 100%; } }
 
 body {
   font-family: sans-serif;
@@ -45,9 +45,14 @@ body {
 
 .jumbotron {
    margin: 0;
-   background-image: url("/Users/sepehrparirokh/Desktop/visualizeMe/CSS/images/jumbotron.jpg");
+   background-image: url("../CSS/images/jumbotron.jpg");
    background-size: cover;
  }
+
+
+ /**********************************************/
+                   /* JUMBOTRON */
+ /**********************************************/
 
  /**********************************************/
                    /* BODY */
@@ -120,12 +125,14 @@ select {
                   /* NUERAL NETWORK */
 /**********************************************/
 .nueral-network {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 20px solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 10px;
   border-top: 1px solid;
 }
-
+.btn .btn-primary {
+  text-align: center;
+}
 
 
 
@@ -145,6 +152,7 @@ border-style: solid;
 .container  {
   padding-bottom: 12px;
   padding-top: 20px;
+  padd
 }
 
 /**********************************************/

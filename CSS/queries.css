@@ -1,0 +1,75 @@
+
+
+/* tablets vertical mode */
+@media only screen and (max-width: 1200px) {
+  .hero-text-box {
+    width: 100%;
+    padding: 0 2%;
+  }
+  .row {padding: 0 2%;}
+}
+
+
+/* tablets portrait mode */
+@media only screen and (max-width: 1023px) {
+  body {font-size: 18px;}
+  section {padding: 60px 0;}
+
+  .long-copy {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .social-linksa  {
+    list-style: none;
+    text-align: center;
+  }
+
+
+
+}
+
+
+/* larger phones */
+@media only screen and (max-width: 767px) {
+  body {font-size: 16px;}
+  section {padding: 30px 0;}
+
+  .hero-text-box, .row {padding: 0 4%;}
+  .col {width: 100%;}
+  .main-nav {display: none;}
+
+  .long-copy {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+
+  h1 {font-size: 180%;
+    padding-right: 30px;
+  }
+  h2 {font-size: 150%;}
+  #last-text {font-size: 180%;}
+}
+
+
+/*  small phones */
+@media only screen and (max-width: 480px) {
+  body {font-size: 16px;}
+  section {padding: 30px 0;}
+
+  .hero-text-box, .row {padding: 0 4%;}
+  .col {width: 100%;}
+  .main-nav {display: none;}
+
+  .long-copy {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+
+  h1 {font-size: 180%;
+    padding-right: 30px;
+  }
+  h2 {font-size: 150%;}
+  #last-text {font-size: 180%;}
+}

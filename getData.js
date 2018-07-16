@@ -75,7 +75,7 @@ function getData(dataset,getFunction) {
 function getNueralData(dataset) {
   for(let key in dataset) {
     if (key === "trainedOuput") {
-      return dataset[key].cal;
+      return dataset[key].cal * 100;
     }
   }
 }
@@ -310,26 +310,37 @@ function recipeSearch(){
         var APIKey = '&app_key=0ada957d3714df14b9602bc7869a6178';
         var applicationID = '&app_id=683d8f0f';
         var q = $("#recipeQuery").val();
-        var queryURL = 'https://api.edamam.com/api/food-database/parser?ingr=' + q +APIKey + applicationID ;
+        var queryURL = 'https://api.edamam.com/api/food-database/parser?ingr=' + q +APIKey + applicationID;
         $.ajax({
             url: queryURL,
             method: "GET"
             }).then(function(response) {
 
 
-          recipeArray = response.hints
+           console.log(response.hints);
+           recipeArray = response.hints;
+            console.log(recipeArray);
 
             for (i=0; i < recipeArray.length; i++){
 
-                var recipeName = recipeArray[i].food.label
+                //var recipeName = recipeArray[i].food.label
+                console.log(recipeName)  // x axis
+
                 var recipeNutrients = recipeArray[i].food.nutrients // yaxis
+                //console.log(recipeNutrients);
+
+                document.getElementById("recipeResult").innerHTML = recipeNutrients;
+                console.log(recipeNutrients);
+
+                //$().append(recipeName);
+                //$().append(recipeNutrients);
 
 
-                q.append(recipeName);
-                q.append(recipeNutrients);
-                $('#recipeSearch'). append(q);
+                //q.append(recipeName);
+                //q.append(recipeNutrients);
+                //$('#recipeSearch'). append(q);
 
             }
         })
     })
-}
+};
