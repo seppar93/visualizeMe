@@ -86,46 +86,52 @@
 <br>
 </form>
 </section>
+<!--  Contact form -->
 <div class="container">
-    <div class="card">
-            <div class="card-body">
-                <h3>Contact Visualize<strong>Me</strong> by filling out the details below</h3>
-                <hr>
-    <form data-toggle="validator" role="form">
-            <div class="form-group">
-                    <label for="inputName" class="control-label"> Full Name:</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Your Name" required>
-            </div>
-            <div class="form-group has-feedback">
-                    <label for="phonenum">Phone Number (xxx-xxx-xxxx)::</label><br/>
-                    <input id="phonenum" class="form-control" type="tel" pattern="^\d{4}-\d{3}-\d{4}$"  required>
-            </div>
-            <div class="form-group">
-                    <label for="inputEmail" class="control-label">Email:</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="E-mail" data-error="That email address is invalid" required>
-                    <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea class="form-control" placeholder="Enter your message here" id="message" rows="5"></textarea>
-                  </div>
-            <div class="form-group">
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm-4"></div>
-                            <div class="col-sm-3">
-                              <button  class="btn btn-primary btn-sm">Send</button>
+       <div class="card">
+                <div class="card-body">
+                    <h3>Contact Visualize<strong>Me</strong> by filling out the details below</h3>
+                    <hr>
+        <form data-toggle="validator" role="form">
+                <div class="form-group">
+                        <label for="inputName" class="control-label"> Full Name:</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Your Name" required>
+                </div>
+                <div class="form-group has-feedback">
+                        <label for="inputNum">Phone Number (xxx-xxx-xxxx):</label><br/>
+                        <input id="inputNum" class="form-control" type="tel" pattern="^\d{3}-\d{3}-\d{4}$"  required>
+                </div>
+                <div class="form-group">
+                        <label for="inputEmail" class="control-label">Email:</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="E-mail" data-error="That email address is invalid" required>
+                        <div class="help-block with-errors"></div>
+                </div>
+
+
+                <div class="form-group">
+                        <label for="inputMes">Message:</label>
+                        <textarea class="form-control" placeholder="Enter your message here" id="inputMes" rows="5"></textarea>
+                      </div>
+
+                <div class="form-group">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-3">
+                                  <button   class="btn btn-primary btn-sm" id="submit" data-toggle="modal" data-target="#myModal">Send</button>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <button type="reset" class="btn btn-primary btn-sm">Reset</button>
+                                </div>
                             </div>
-                            <div class="col-sm-3">
-                              <button type="reset" class="btn btn-primary btn-sm">Reset</button>
-                            </div>
-                        </div>
-                          </div>
-            </div>
-          </form>
-          </div>
-          </div>
-</div>
+                              </div>
+                </div>
+              </form>
+              </div>
+              </div>
+
+    </div>
 
   <br>
   <!-- <section>
@@ -242,24 +248,13 @@
 </section>
 
 <footer class="footer">
-    <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
-    </div>
     <div class="row">
         <div class="col-1-of-2">
             <div class="footer__navigation">
                 <ul class="footer__list">
-                    <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
                     <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="col-1-of-2">
-            <p class="footer__copyright">
-            </p>
         </div>
     </div>
 </footer>
