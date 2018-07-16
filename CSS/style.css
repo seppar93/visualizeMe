@@ -60,13 +60,17 @@ p {
    font-size: 20px;
    font-weight: bold;
 }
+
+/**********************************************/
+                  /* PARALLAX */
+/**********************************************/
 #protein {
    height: 50vh;
    width: 100%;
    background-size: cover;
    display: table;
    background-attachment: fixed;
-   background-image: url(/Users/sepehrparirokh/Desktop/visualizeMe/CSS/images/protien.jpg);
+   background-image: url(../CSS/images/protien.jpg);
 }
 
 #calories {
@@ -75,7 +79,7 @@ p {
    background-size: cover;
    display: table;
    background-attachment: fixed;
-   background-image: url(/Users/sepehrparirokh/Desktop/visualizeMe/CSS/images/calories.jpg);
+   background-image: url(../CSS/images/calories.jpeg);
 }
 
 #carbs {
@@ -84,7 +88,7 @@ p {
    background-size: cover;
    display: table;
    background-attachment: fixed;
-   background-image: url(/Users/sepehrparirokh/Desktop/visualizeMe/CSS/images/carbs.jpeg);
+   background-image: url(../CSS/images/carbs.jpeg);
 }
 
 #macros {
@@ -93,7 +97,7 @@ p {
    background-size: cover;
    display: table;
    background-attachment: fixed;
-   background-image: url(/Users/sepehrparirokh/Desktop/visualizeMe/CSS/images/macros.jpeg);
+   background-image: url(../CSS/images/macros.jpg);
 }
 
 #fat {
@@ -102,7 +106,7 @@ p {
    background-size: cover;
    display: table;
    background-attachment: fixed;
-   background-image: url(/Users/sepehrparirokh/Desktop/visualizeMe/CSS/images/fats.jpeg);
+   background-image: url(../CSS/images/fats.jpeg);
 }
 
 select {
@@ -143,13 +147,15 @@ border-style: solid;
 /**********************************************/
                   /* API */
 /**********************************************/
-.API {
+.nutration-api {
   padding: 20px 20px 20px 20px;
   border-top: 1px solid
 
 }
 
+.recipeApi {
 
+}
 
 
 /**********************************************/

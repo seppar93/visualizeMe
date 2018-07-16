@@ -317,14 +317,19 @@ function recipeSearch(){
             url: queryURL,
             method: "GET"
             }).then(function(response) {
-            console.log(response.hints)
-            recipeArray = response.hints
-            console.log(recipeArray)
+
+
+          recipeArray = response.hints
+
             for (i=0; i < recipeArray.length; i++){
+
                 var recipeName = recipeArray[i].food.label
-                console.log(recipeName)  // x axis
                 var recipeNutrients = recipeArray[i].food.nutrients // yaxis
-                console.log(recipeNutrients)
+
+
+                q.append(recipeName);
+                q.append(recipeNutrients);
+                $('#recipeSearch'). append(q);
 
             }
         })

@@ -6,9 +6,10 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <link rel="stylesheet" href="CSS/style.css">
    <script
-   src="https://code.jquery.com/jquery-3.3.1.js"
-   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-   crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+  crossorigin="anonymous"></script>
+
  </head>
 
  <body>
@@ -220,70 +221,100 @@
 
 <!-- ///////////////////////////////API 1//////////////////////////////////  -->
 
-    <section class="API">
-  <!--Nutrient Search API-->
-  <div id="bottom">
+  <section class="nutration-api" id="bottom">
 
-        <div class="row">
-          <p>Interested in seeing how many nutreints are in a food group?  Select a nutrient and food group from our drop down menu and press search.</p>
-          </div>
-        <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-3">
-            <label for="">Nutrient:</label>
-                <select id="nutrient" name="nutrient1" class="n1" value=""  title="Select the nutrient to report">
-                    <option value="">Select a nutrient</option>
-                    <option value="208">Energy (kcal)</option>
-                    <option value="203">Protein (g)</option>
-                    <option value="204">Fat (g)</option>
-                    <option value="205">Carbohydrates (g)</option>
-                </select>
-            </div>
-            <div class="col-lg-4">
-            <label for="" fg="">Food Groups:</label>
-                <select class="fg" id="foodGroup" name="food-group" >
-                    <option value="">Select a Food Type</option>
-                    <option value="1800">Baked Products</option>
-                    <option value="1300">Beef Products</option>
-                    <option value="1400">Beverages</option>
-                    <option value="0800">Breakfast Cereals</option>
-                    <option value="2000">Cereal Grains and Pasta</option>
-                    <option value="0100">Dairy and Egg Products</option>
-                    <option value="1500">Finfish and Shellfish Products</option>
-                    <option value="0900">Fruits and Fruit Juices</option>
-                    <option value="1700">Lamb, Veal, and Game Products</option>
-                    <option value="1600">Legumes and Legume Products</option>
-                    <option value="1200">Nut and Seed Products</option>
-                    <option value="1000">Pork Products</option>
-                    <option value="0500">Poultry Products</option>
-                    <option value="2300">Snacks</option>
-                    <option value="1100">Vegetables and Vegetable Products</option>
-                </select>
-            </div>
-        <button id="foodSearch" class="col-lg-1">Search</button>
-        </div>
-        <div class="col-lg-2"></div>
-        <div class="row">Input text in the input area to search recipes.</div>
-        <div class="row">
-                <div class="col-lg-4"></div>
-                <div class="col-lg-4">
-                    <input id="recipeQuery">
-                    <button id ="recipeSearch" style="margin-left: 20px;">Recipe</button>
-                </div>
-                <div class="col-lg-4"></div>
-            </div>
-            </div>
-</div>
+    <<div class="container">
+        <div class="card">
+                 <div class="card-body">
+                     <p class="text-center">Interested in seeing how many nutreints are in a food group?  Select a nutrient and food group from our drop down menu and press search.</p>
+                     <hr>
 
 
-<ul class="list-group">
-  <li class="list-group-item disabled">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
+                       <div class="container">
+                         <div class="row">
+                           <div class="col-sm-2"></div>
+                           <div class="form-group col-sm-4">
+
+                         <label for="nutrient">Nutrient:</label>
+                             <select id="nutrient" name="nutrient1" class="form-control n1" value=""  title="Select the nutrient to report">
+                                 <option value="">Select a nutrient</option>
+                                 <option value="208">Energy (kcal)</option>
+                                 <option value="203">Protein (g)</option>
+                                 <option value="204">Fat (g)</option>
+                                 <option value="205">Carbohydrates (g)</option>
+                             </select>
+                             <br>
+                           </div>
+
+                         <div class="form-group col-sm-4">
+                             <label for="food-group" fg="">Food Groups:</label>
+                             <select class="form-control fg" id="foodGroup" name="food-group" >
+                                 <option value="">Select a Food Type</option>
+                                 <option value="1800">Baked Products</option>
+                                 <option value="1300">Beef Products</option>
+                                 <option value="1400">Beverages</option>
+                                 <option value="0800">Breakfast Cereals</option>
+                                 <option value="2000">Cereal Grains and Pasta</option>
+                                 <option value="0100">Dairy and Egg Products</option>
+                                 <option value="1500">Finfish and Shellfish Products</option>
+                                 <option value="0900">Fruits and Fruit Juices</option>
+                                 <option value="1700">Lamb, Veal, and Game Products</option>
+                                 <option value="1600">Legumes and Legume Products</option>
+                                 <option value="1200">Nut and Seed Products</option>
+                                 <option value="1000">Pork Products</option>
+                                 <option value="0500">Poultry Products</option>
+                                 <option value="2300">Snacks</option>
+                                 <option value="1100">Vegetables and Vegetable Products</option>
+                             </select>
+                           </div>
+                           </div>
+                           <div class="form-group">
+                               <div class="row">
+                           <div class="col-sm-4"></div>
+                           <button id="foodSearch" class="btn-lg btn-primary col-sm-4">Search</button>
+                         </div>
+                       </div>
+                     </div>
+                  </div>
+               </div>
+         </div>
 </section>
+
+
+<section class="recipeApi">
+
+  <div class="container">
+          <div class="card">
+              <div class="card-body">
+                  <p class="text-center">Search a food item below and find recipes for to satisfy your needs</p>
+                  <hr>
+
+              <div class="row">
+                      <div class="col-lg-2"></div>
+
+                      <div class="col-lg-8">
+                          <div class="form-group">
+                          <input type="text" class="form-control" id="recipeQuery" placeholder="search for recipes here...">
+                          </div>
+                      </div>
+                      </div>
+                          <br>
+
+             <div class="row">
+
+             <div class="col-sm-4"></div>
+                          <button id ="recipeSearch" class="btn btn-primary btn-lg col-sm-4"> Search for Recipe </button>
+                        </div>
+                        </div>
+                      </div>
+
+                  </div>
+                  </div>
+              </div>
+          </div>
+
+</section>
+
 
 <footer class="footer">
     <ul class="nav">
@@ -348,7 +379,10 @@
 
 <!-- ///////////////////////////////API///////////////////////////////////////  -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
