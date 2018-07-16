@@ -12,164 +12,120 @@
  </head>
 
  <body>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top ">
-     <a class="navbar-brand" href="#">VisualizeMe</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top ">
+        <a class="navbar-brand" href="#">VisualizeMe</a>
 
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarNav">
-       <ul class="navbar-nav">
-         <li class="nav-item">
-           <a class="nav-link" href="#calories">Calories<span class="sr-only"></span></a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="#protien">Proteins</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="#carbs">Fats</a>
-           <li class="nav-item">
-              <a class="nav-link" href="#carbs">Carbs</a>
-              <li class="nav-item">
-                  <a class="nav-link" href="#carbs">Macros</a>
-         </li>
-
-       </ul>
-     </div>
-
-   </nav>
-   <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">visualize<strong>Me</strong></h1>
-        <p class="lead">Come visualize and better understand your health and nutrition data</p>
-      </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#calories">Calories
+                        <span class="sr-only"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#protien">Proteins</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#carbs">Fats</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carbs">Carbs</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#carbs">Macros</a>
+                        </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">visualize
+                <strong>Me</strong>
+            </h1>
+            <p class="lead">Come visualize and better understand your health and nutrition data</p>
+        </div>
     </div>
-
+    <div id="calories">
+        <div style="text-align: center; display: table-cell; vertical-align: middle;">
+            <h1>Calories</h1>
+            <br>
+            <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+    </div>
+    <div id="macros">
+        <div style="text-align: center; display: table-cell; vertical-align: middle;">
+            <h1>Macros</h1>
+            <br>
+            <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+    </div>
+    <div id="protein">
+        <div style="text-align: center; display: table-cell; vertical-align: middle;">
+            <h1>Proteins</h1>
+            <br>
+            <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+    </div>
+    <div id="fat">
+        <div style="text-align: center; display: table-cell; vertical-align: middle;">
+            <h1>Fats</h1>
+            <br>
+            <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+    </div>
+    <div id="carbs">
+        <div style="text-align: center; display: table-cell; vertical-align: middle;">
+            <h1>Carbs</h1>
+            <br>
+            <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+    </div>
 <br>
-
+<br>
+</form>
+</section>
 <div class="container">
-
-<br>
-<div class="row featurette text-center" id="aboutUs">
-  <div class="col-md-12">
-    <h2 class="featurette-heading"><strong>What is VisualizeMe?</strong></h2> <span class="text-muted">more text.</span>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
+    <div class="card">
+            <div class="card-body">
+                <h3>Contact Visualize<strong>Me</strong> by filling out the details below</h3>
+                <hr>
+    <form data-toggle="validator" role="form">
+            <div class="form-group">
+                    <label for="inputName" class="control-label"> Full Name:</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Your Name" required>
+            </div>
+            <div class="form-group has-feedback">
+                    <label for="phonenum">Phone Number (xxx-xxx-xxxx)::</label><br/>
+                    <input id="phonenum" class="form-control" type="tel" pattern="^\d{4}-\d{3}-\d{4}$"  required>
+            </div>
+            <div class="form-group">
+                    <label for="inputEmail" class="control-label">Email:</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="E-mail" data-error="That email address is invalid" required>
+                    <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" placeholder="Enter your message here" id="message" rows="5"></textarea>
+                  </div>
+            <div class="form-group">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-3">
+                              <button  class="btn btn-primary btn-sm">Send</button>
+                            </div>
+                            <div class="col-sm-3">
+                              <button type="reset" class="btn btn-primary btn-sm">Reset</button>
+                            </div>
+                        </div>
+                          </div>
+            </div>
+          </form>
+          </div>
+          </div>
 </div>
-<br>
-<hr class="featurette-divider">
-<br>
-<div class="row featurette" id="protien">
-    <div class="col-md-5 pull-md-7">
-        <img class="featurette-image img-fluid mx-auto" src="./CSS/pie.PNG" alt="Generic placeholder image">
-      </div>
-  <div class="col-md-7 push-md-5">
-    <h2 class="featurette-heading" >Protein</h2> <span class="text-muted">more text.</span>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-
-</div>
-<br>
-<hr class="featurette-divider" id="fats">
-<br>
-<div class="row featurette">
-  <div class="col-md-7">
-    <h2 class="featurette-heading">Fats</h2> <span class="text-muted">more text.</span>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-  <div class="col-md-5">
-    <img class="featurette-image img-fluid mx-auto" src="./CSS/line.PNG" alt="Generic placeholder image">
-  </div>
-</div>
-<br>
-<hr class="featurette-divider">
-<div class="row featurette" id="carbs">
-    <div class="col-md-5 pull-md-7">
-        <img class="featurette-image img-fluid mx-auto" src="" alt="Generic placeholder image">
-      </div>
-  <div class="col-md-7 push-md-5">
-    <h2 class="featurette-heading" >Carbs</h2> <span class="text-muted">more text.</span>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-
-</div>
-<br>
-<hr class="featurette-divider">
-<br>
-<div class="row featurette" id="macros">
-  <div class="col-md-7">
-    <h2 class="featurette-heading" >Macros</h2> <span class="text-muted">more text.</span>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-  <div class="col-md-5">
-      <img class="featurette-image img-fluid mx-auto" src="./CSS/stacked.PNG" alt="Generic placeholder image">
-  </div>
-</div>
-<br>
-<hr class="featurette-divider">
-</div>
-  <br>
-  <br>
-
-  <section>
-    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myFormModal">Contact Form</button>
-
-       <div id="myFormModal" class="modal fade" role="dialog">
-         <div class="modal-dialog">
-
-           <div class="modal-content">
-             <div class="modal-header">
-               <h4 class="modal-title text-center">Please fill your details out below</h4>
-             </div>
-             <div class="modal-body">
-               <form class="form-horizontal" id="myForm" name="contact" action="#">
-
-       <form data-toggle="validator" role="form">
-               <div class="form-group">
-                       <label for="inputName" class="control-label">Name</label>
-                       <input type="text" class="form-control" id="inputName" placeholder="Your Name" required>
-               </div>
-               <div class="form-group has-feedback">
-                       <label for="phonenum">Phone Number (xxx-xxx-xxxx):</label><br/>
-                       <input id="phonenum" class="form-control" type="tel" pattern="^\d{4}-\d{3}-\d{4}$"  required>
-               </div>
-               <div class="form-group">
-                       <label for="inputEmail" class="control-label">Email</label>
-                       <input type="email" class="form-control" id="inputEmail" placeholder="E-mail" data-error="That email address is invalid" required>
-                       <div class="help-block with-errors"></div>
-               </div>
-
-
-               <div class="form-group">
-                       <label for="message">Message:</label>
-                       <textarea class="form-control" placeholder="Enter your message here" id="message" rows="5"></textarea>
-                     </div>
-
-               <div class="form-group">
-                       <div class="form-group">
-                           <div class="row">
-                                   <div class="col-sm-2"></div>
-                               <div class="col-sm-offset-3 col-sm-3">
-                                 <button  class="btn btn-primary btn-sm">Save</button>
-                               </div>
-                               <div class="col-sm-3">
-                                 <button type="reset" class="btn btn-primary btn-sm">Reset</button>
-                               </div>
-                               <div class="col-sm-3">
-                                 <button type="button" class="btn btn-primary btn-sm close-external-modal" data-dismiss="modal">Close</button>
-                               </div>
-                           </div>
-                             </div>
-               </div>
-             </form>
-  </section>
-
-
-
-
-
-
-
 
   <br>
   <!-- <section>
@@ -177,97 +133,137 @@
   </section> -->
 
 
-  <section>
-    <canvas id="stacked-bar-graph" width="300" height="300"></canvas>
+  <section class="graph">
+    <div class="charts">
+      <canvas id="stacked-bar-graph" width="300" height="300"></canvas>
+
+    </div>
 
   </section>
 
-  <section>
-    <canvas id="macros-pie-bar" width="300" height="300"></canvas>
+  <section class="graph">
+    <div class="charts">
+      <canvas id="macros-pie-bar" width="300" height="300"></canvas>
+
+    </div>
   </section>
 
-  <section>
-    <canvas id="calorie-line-graph" width="300" height="300"></canvas>
+  <section class="graph">
+    <div class="charts">
+      <canvas id="calorie-line-graph" width="300" height="300"></canvas>
+
+    </div>
   </section>
 
-  <section>
-    <canvas id="calorie-carbs-graph" width="300" height="300"></canvas>
+  <section class="graph">
+    <div class="charts">
+      <canvas id="calorie-carbs-graph" width="300" height="300"></canvas>
+
+    </div>
   </section>
 
-  <section>
-    <canvas id="calorie-protein-graph" width="300" height="300"></canvas>
+  <section class="graph">
+    <div class="charts">
+      <canvas id="calorie-protein-graph" width="300" height="300"></canvas>
+
+    </div>
   </section>
 
-  <section>
-    <canvas id="calorie-fat-graph" width="300" height="300"></canvas>
+  <section class="graph">
+    <div class="charts">
+      <canvas id="calorie-fat-graph" width="300" height="300"></canvas>
+
+    </div>
   </section>
 
-  <section>
-    <canvas id="api-bar-graph" width="300" height="300"></canvas>
+  <section class="graph">
+    <div class="charts">
+      <canvas id="api-bar-graph" width="300" height="300"></canvas>
+
+    </div>
   </section>
 
 <!-- ///////////////////////////////API 1//////////////////////////////////  -->
-<section class="API">
+
+    <section class="API">
   <!--Nutrient Search API-->
-      <div class="row">
-          <label for="">Nutrient:</label>
-          <select id="nutrient" name="nutrient1" class="n1" value=""  title="Select the nutrient to report">
-              <option value="">Select a nutrient</option>
-                  <option value="208">Energy (kcal)</option>
-                  <option value="203">Protein (g)</option>
-                  <option value="204">Fat (g)</option>
-                  <option value="205">Carbohydrates (g)</option>
-          </select>
-      </div>
+  <div id="bottom">
 
-      <div class="row">
-          <div class="col-sm-6">
-          <label for="" fg="">Food Groups:</label>
-
-          <select class="fg" id="foodGroup" name="food-group" >
-          <option value="">Select a Food Type</option>
-          <option value="1800">Baked Products</option>
-          <option value="1300">Beef Products</option>
-          <option value="1400">Beverages</option>
-          <option value="0800">Breakfast Cereals</option>
-          <option value="2000">Cereal Grains and Pasta</option>
-          <option value="0100">Dairy and Egg Products</option>
-          <option value="1500">Finfish and Shellfish Products</option>
-          <option value="0900">Fruits and Fruit Juices</option>
-          <option value="1700">Lamb, Veal, and Game Products</option>
-          <option value="1600">Legumes and Legume Products</option>
-          <option value="1200">Nut and Seed Products</option>
-          <option value="1000">Pork Products</option>
-          <option value="0500">Poultry Products</option>
-          <option value="2300">Snacks</option>
-          <option value="1100">Vegetables and Vegetable Products</option>
-          </select>
-      </div>
-
-      <div class ="row">
-          <button id="foodSearch">Search</button>
-      </div>
+        <div class="row">
+          <p>Interested in seeing how many nutreints are in a food group?  Select a nutrient and food group from our drop down menu and press search.</p>
+          </div>
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-3">
+            <label for="">Nutrient:</label>
+                <select id="nutrient" name="nutrient1" class="n1" value=""  title="Select the nutrient to report">
+                    <option value="">Select a nutrient</option>
+                    <option value="208">Energy (kcal)</option>
+                    <option value="203">Protein (g)</option>
+                    <option value="204">Fat (g)</option>
+                    <option value="205">Carbohydrates (g)</option>
+                </select>
+            </div>
+            <div class="col-lg-4">
+            <label for="" fg="">Food Groups:</label>
+                <select class="fg" id="foodGroup" name="food-group" >
+                    <option value="">Select a Food Type</option>
+                    <option value="1800">Baked Products</option>
+                    <option value="1300">Beef Products</option>
+                    <option value="1400">Beverages</option>
+                    <option value="0800">Breakfast Cereals</option>
+                    <option value="2000">Cereal Grains and Pasta</option>
+                    <option value="0100">Dairy and Egg Products</option>
+                    <option value="1500">Finfish and Shellfish Products</option>
+                    <option value="0900">Fruits and Fruit Juices</option>
+                    <option value="1700">Lamb, Veal, and Game Products</option>
+                    <option value="1600">Legumes and Legume Products</option>
+                    <option value="1200">Nut and Seed Products</option>
+                    <option value="1000">Pork Products</option>
+                    <option value="0500">Poultry Products</option>
+                    <option value="2300">Snacks</option>
+                    <option value="1100">Vegetables and Vegetable Products</option>
+                </select>
+            </div>
+        <button id="foodSearch" class="col-lg-1">Search</button>
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="row">Input text in the input area to search recipes.</div>
+        <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <input id="recipeQuery">
+                    <button id ="recipeSearch" style="margin-left: 20px;">Recipe</button>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+            </div>
+</div>
 </section>
 
-<br>
-<br>
-<br>
-
-
+<footer class="footer">
+    <div class="footer__logo-box">
+        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+    </div>
+    <div class="row">
+        <div class="col-1-of-2">
+            <div class="footer__navigation">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-1-of-2">
+            <p class="footer__copyright">
+            </p>
+        </div>
+    </div>
+</footer>
 <!-- ///////////////////////////////API///////////////////////////////////////  -->
-
-<div class= "row">
-    <input id="recipeQuery">
-    <button id ="recipeSearch">Recipe</button>
-</div>
-
-
-
-
-
-<!-- ///////////////////////////////API///////////////////////////////////////  -->
-
-
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
  <script src="getData.js" charset="utf-8"></script>
  <script src="dataset.js" charset="utf-8"></script>

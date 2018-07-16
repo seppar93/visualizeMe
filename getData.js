@@ -159,7 +159,8 @@ function sum(arr) {
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////STACKED CALORIE BAR GRAPH//////////////////////
 
-var ctx = document.getElementById("stacked-bar-graph"); // whatever name we are going to give the calories div
+var ctx = document.getElementById("stacked-bar-graph");
+ctx.height = 100; // whatever name we are going to give the calories div
 var caloriesChart = new Chart(ctx, {
 type: 'bar',  //NOTE: ideally we can make this tied to a dropdown menu on the HTML to change chart type
 data: {
@@ -199,6 +200,8 @@ data: {
 /////////////////////////////////MACROS PIE GRAPH///////////////////////////////
 
 var ctx = document.getElementById("macros-pie-bar");
+ctx.height = 100;
+
 var myChart = new Chart(ctx, {
 //type of chart
 type: 'pie',
@@ -234,7 +237,8 @@ options: {
 /////////////////////////////////CALORIES LINE GRAPH///////////////////////////////
 
 
-var ctx = document.getElementById("calorie-line-graph"); // <-- div for area hold weight line graph goes in here
+var ctx = document.getElementById("calorie-line-graph");
+ctx.height = 100;
 var caloriesChart = new Chart(ctx, {
     type: 'line', //type of chart
     data: {
@@ -251,7 +255,8 @@ var caloriesChart = new Chart(ctx, {
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////CARBS LINE GRAPH///////////////////////////////
 
-var ctx = document.getElementById("calorie-carbs-graph"); // <-- div for area hold weight line graph goes in here
+var ctx = document.getElementById("calorie-carbs-graph");
+ctx.height = 100;
 var caloriesChart = new Chart(ctx, {
     type: 'line', //type of chart
     data: {
@@ -267,7 +272,9 @@ var caloriesChart = new Chart(ctx, {
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////PROTIEN LINE GRAPH/////////////////////////////
-var ctx = document.getElementById("calorie-protein-graph"); // <-- div for area hold weight line graph goes in here
+var ctx = document.getElementById("calorie-protein-graph");
+ctx.height = 100;
+
 var caloriesChart = new Chart(ctx, {
     type: 'line', //type of chart
     data: {
@@ -283,7 +290,9 @@ var caloriesChart = new Chart(ctx, {
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////FAT LINE GRAPH/////////////////////////////////
-var ctx = document.getElementById("calorie-fat-graph"); // <-- div for area hold weight line graph goes in here
+var ctx = document.getElementById("calorie-fat-graph");
+ctx.height = 100;
+
 var caloriesChart = new Chart(ctx, {
     type: 'line', //type of chart
     data: {
@@ -354,4 +363,4 @@ function recipeSearch(){
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////BRAIN.JS///////////////////////////////////////
-console.log(Math.floor((profileData.trainedOuput.cal) * 100) + "%");
+// let AIResult = Math.floor((profileData.trainedOuput.cal) * 100) + "%";
