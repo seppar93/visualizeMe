@@ -19,6 +19,8 @@
 /////////////////////////////////API DATA///////////////////////////////////////
 // var foodName;
 // var foodNutrientValue;
+// let someStuff = Math.floor(profileData.trainedOuput.cal) * 100;
+
 
 var nutrientLookup = nutrientSearch()
 function nutrientSearch(){
@@ -292,7 +294,6 @@ var caloriesChart = new Chart(ctx, {
 /////////////////////////////////FAT LINE GRAPH/////////////////////////////////
 var ctx = document.getElementById("calorie-fat-graph");
 ctx.height = 100;
-
 var caloriesChart = new Chart(ctx, {
     type: 'line', //type of chart
     data: {
@@ -363,4 +364,3 @@ function recipeSearch(){
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////BRAIN.JS///////////////////////////////////////
-console.log(Math.floor((profileData.trainedOuput.cal)));
