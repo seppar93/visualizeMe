@@ -1,22 +1,6 @@
-// function getCalories(dataset) {
-//   let cal = [];
-//
-//   for(let key in dataset) {
-//     if (key === "data") {
-//       let info = dataset[key];
-//       // console.log(info);
-//       for (var i = 0; i < info.length; i++) {
-//         let arraySet = info[i];
-//         cal.push(arraySet.calories)
-//         // console.log(arraySet.calories);
-//       }
-//     }
-//   }
-//   return cal;
-// }
 
 ////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////API DATA///////////////////////////////////////
+/////////////////////////////////API DATA AND GRAPH/////////////////////////////
 // var foodName;
 // var foodNutrientValue;
 // let someStuff = Math.floor(profileData.trainedOuput.cal) * 100;
@@ -310,28 +294,6 @@ var caloriesChart = new Chart(ctx, {
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////API Graph/////////////////////////////////
 
-// var ctx = document.getElementById("api-calorie-graph"); // whatever name we are going to give the calories div
-// var caloriesChart = new Chart(ctx, {
-// type: 'bar',  //NOTE: ideally we can make this tied to a dropdown menu on the HTML to change chart type
-// data: {
-//   labels : foodName,  //the variable pulled from the JSON loop
-//   datasets: [ {
-//     label: "Calorie example",
-//     backgroundColor: 'rgb(255, 99, 132)',
-//     borderColor: 'rgb(255, 99, 132)',
-//     data: foodNutrientValue,     //the other variable pulled from the JSON loop
-// }]
-// },
-// options: {
-// scales: {
-//     yAxes: [{
-//         ticks: {
-//             beginAtZero: true
-//         }
-//     }]
-// }
-// }
-// });
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////API////////////////////////////////////////////

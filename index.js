@@ -19,18 +19,6 @@ mfp.fetchDateRange('Charoolz', '2018-01-15', '2018-07-01', ['calories', 'protein
 
   dataSet.trainedOuput = output;
 
-
-
-
-
-
-
-
-
-
-
-
-
   fs.writeFileSync("dataset.js",'var profileData='+JSON.stringify(dataSet, null ,2));
 });
 
