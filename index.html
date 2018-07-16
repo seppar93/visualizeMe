@@ -58,36 +58,31 @@
     <div id="calories">
         <div class="box">
             <h1>Calories</h1>
-            <br>
-            <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p style="width: 70%; margin: auto;">A calorie is the energy needed to raise the temperature of 1 kilogram of water through 1 °C, equal to one thousand small calories and often used to measure the energy value of foods.</p>
         </div>
     </div>
     <div id="macros">
         <div class="box">
             <h1>Macros</h1>
-            <br>
-            <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p style="width: 70%; margin: auto;">Macros is the number of grams of protein, carbohydrates, and fats you consume on a particular day.</p>
         </div>
     </div>
     <div id="protein">
         <div class="box">
             <h1>Proteins</h1>
-            <br>
-            <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p style="width: 70%; margin: auto;">Proteins are any of a class of nitrogenous organic compounds that consist of large molecules composed of one or more long chains of amino acids and are an essential part of all living organisms, especially as structural components of body tissues such as muscle, hair, collagen, etc., and as enzymes and antibodies.</p>
         </div>
     </div>
     <div id="fat">
         <div class="box">
             <h1>Fats</h1>
-            <br>
-            <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p style="width: 70%; margin: auto;">The foods we eat contain nutrients that provide energy and other substances the body needs. Most of the nutrients in food fall into three major groups: proteins, fats, and carbohydrates. The body uses fat as a fuel source, and fat is the major storage form of energy in the body.</p>
         </div>
     </div>
     <div id="carbs">
         <div class="box">
             <h1>Carbs</h1>
-            <br>
-            <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p style="width: 70%; margin: auto;">Carbohydrates can also be defined chemically as neutral compounds of carbon, hydrogen and oxygen. Carbohydrates come in simple forms such as sugars and in complex forms such as starches and fiber. The body breaks down most sugars and starches into glucose, a simple sugar that the body can use to feed its cells.</p>
         </div>
     </div>
   </section>
@@ -154,20 +149,19 @@ $('#myModal').on('shown.bs.modal', function () {
 <!-- <h1 id="result"></h1> -->
 <!--  card for nueral network -->
 <div class="card">
-  <div class="card-header">
-    NEURAL NETWORK
+  <div class="card-header text-center">
+    A neural network is a computer system modelled on the human brain and nervous system.
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Have the forsight to know</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  <div class="card-body text-center">
+    <h5 class="card-title">VisualizeMe has utilized an effective neural network in its computing languages when interpreting an analyzing your nutritional data. Through this method, we are able to give an accurate prediction on whether you will exceed your caloric intake for a particular amount of time</h5>
 
     <!-- Modal inside of card -->
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-12">
 
           <button type="button" class="btn btn-primary" name="button" data-toggle="modal" data-target="#APIModal">
-            Click me
+            Find out if you will go over your calories
           </button>
           <div class="modal fade" id="APIModal">
             <div class="modal-dialog">
@@ -244,10 +238,10 @@ $('#myModal').on('shown.bs.modal', function () {
 
   <section class="nutration-api" id="bottom">
 
-    <<div class="container">
+    <div class="container">
         <div class="card">
                  <div class="card-body">
-                     <p class="text-center">Interested in seeing how many nutreints are in a food group?  Select a nutrient and food group from our drop down menu and press search.</p>
+                     <p class="text-center" id="apiNu">Interested in seeing how many nutreints are in a food group?  Select a nutrient and food group from our drop down menu and press search.</p>
                      <hr>
 
                        <div class="container">
@@ -307,7 +301,7 @@ $('#myModal').on('shown.bs.modal', function () {
   <div class="container">
          <div class="card">
              <div class="card-body">
-                 <p class="text-center">Search a food item below and find recipes for to satisfy your needs</p>
+                 <p class="text-center" id="apiNu">Search a food item below and find recipes for to satisfy your needs</p>
                  <hr>
 
              <div class="row">
@@ -329,7 +323,7 @@ $('#myModal').on('shown.bs.modal', function () {
                                      <div class="modal-dialog">
                                        <div class="modal-content">
                                          <div class="modal-header">
-                                           <h5>Here are your Choices </h5>
+                                           <h5>Avrage caloire of your search is: </h5>
                                            <div class="moodal-body">
                                              <h4 id="recipeResult"></h4>
                                              <div class="modal-footer">
@@ -350,8 +344,6 @@ $('#myModal').on('shown.bs.modal', function () {
 
 
 <footer class="footer">
-  <div class="nav__item"><a href="contact-form" class="nav__link">Contact us!</a></div>
-
     <p class="copyright">
         &copy; Copyright 2018
     </p>
