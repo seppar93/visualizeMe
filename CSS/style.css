@@ -48,7 +48,19 @@ body {
    background-image: url("../CSS/images/jumbotron.jpg");
    background-size: cover;
  }
-
+h1.display-4 {
+  font-weight: bold;
+  font-size: 60px;
+}
+p.lead {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  background-color: #000;
+  width: 70%;
+  opacity: 0.8;
+  border-radius: 19px;
+}
 
  /**********************************************/
                    /* JUMBOTRON */
@@ -57,17 +69,33 @@ body {
  /**********************************************/
                    /* BODY */
  /**********************************************/
+
+
+
+ .box {
+  vertical-align: middle;
+  width: 70%;
+  margin: auto;
+  background-color: gray;
+  border-radius: 50px;
+  opacity: 0.9;
+  padding: 1%;
+}
+
 h1 {
    font-weight: bold;
-   color: black;
+   color: #ffff;
    font-size: 50px;
+   opacity: 1;
 }
 
 p {
-   color: black;
+   color: white;
    font-size: 20px;
    font-weight: bold;
+   opacity: 1;
 }
+
 
 /**********************************************/
                   /* PARALLAX */
@@ -76,45 +104,50 @@ p {
    height: 50vh;
    width: 100%;
    background-size: cover;
-   display: table;
+   display: flex;
    background-attachment: fixed;
    background-image: url(../CSS/images/protien.jpg);
+   text-align: center;
 }
 
 #calories {
    height: 50vh;
    width: 100%;
    background-size: cover;
-   display: table;
+   display: flex;
    background-attachment: fixed;
    background-image: url(../CSS/images/calories.jpeg);
+   text-align: center;
 }
 
 #carbs {
    height: 50vh;
    width: 100%;
    background-size: cover;
-   display: table;
+   display: flex;
    background-attachment: fixed;
    background-image: url(../CSS/images/carbs.jpeg);
+   text-align: center;
 }
 
 #macros {
    height: 50vh;
    width: 100%;
    background-size: cover;
-   display: table;
+   display: flex;
    background-attachment: fixed;
    background-image: url(../CSS/images/macros.jpg);
+   text-align: center;
 }
 
 #fat {
    height: 50vh;
    width: 100%;
    background-size: cover;
-   display: table;
+   display: flex;
    background-attachment: fixed;
    background-image: url(../CSS/images/fats.jpeg);
+   text-align: center;
 }
 
 select {
@@ -177,4 +210,18 @@ border-style: solid;
 .footer {
   background-color: #838fdb;
   grid-column: full-start / full-end;
-  padding: 8rem; }
+  padding: 8rem;
+  background-image: url("../CSS/images/footer.jpg");
+  background-size: cover;
+
+
+}
+
+#footer-info {
+   width: 100%;
+   font-size: 25px;
+   display: flex;
+   color: white;
+   padding: 3rem;
+   font-weight: bold;
+  }

@@ -11,33 +11,33 @@
  <body>
    <!-- /////////////////////////////NAVBAR//////////////////////////////////-->
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top">
-     <a class="navbar-brand" href="#">VisualizeMe</a>
+     <a class="navbar-brand" href="index.html">VisualizeMe</a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
      </button>
      <div class="collapse navbar-collapse" id="navbarNavDropdown">
        <ul class="navbar-nav">
          <li class="nav-item">
-           <a class="nav-link" href="#">Calories</a>
+           <a class="nav-link" href="#calories">Calories</a>
          </li>
          <li class="nav-item dropdown">
            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              Macros
          </a>
          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-           <a class="dropdown-item" href="#">Carbs</a>
-           <a class="dropdown-item" href="#">Protien</a>
-           <a class="dropdown-item" href="#">Fats</a>
+           <a class="dropdown-item" href="#carbs">Carbs</a>
+           <a class="dropdown-item" href="#protein">Protien</a>
+           <a class="dropdown-item" href="#fats">Fats</a>
          </div>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#">Nutritional Search</a>
+           <a class="nav-link" href="#bottom">Nutritional Search</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" data-toggle="collapse" data-target="#network">Neural Network</a>
+           <a class="nav-link" href="#APIModal">Neural Network</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" data-toggle="collapse" data-target="#contactus">Contact Us</a>
+           <a class="nav-link" href="#CF">Contact Us</a>
          </li>
        </ul>
      </div>
@@ -48,7 +48,7 @@
 <!--/////////////////////////// INFO SECTION ////////////////////////////////-->
 <section>
 <div class="jumbotron jumbotron-fluid">
-        <div class="container">
+        <div class="container" id="jumbo">
             <h1 class="display-4">visualize
                 <strong>Me</strong>
             </h1>
@@ -56,35 +56,35 @@
         </div>
     </div>
     <div id="calories">
-        <div style="text-align: center; display: table-cell; vertical-align: middle;">
+        <div class="box">
             <h1>Calories</h1>
             <br>
             <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
     </div>
     <div id="macros">
-        <div style="text-align: center; display: table-cell; vertical-align: middle;">
+        <div class="box">
             <h1>Macros</h1>
             <br>
             <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
     </div>
     <div id="protein">
-        <div style="text-align: center; display: table-cell; vertical-align: middle;">
+        <div class="box">
             <h1>Proteins</h1>
             <br>
             <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
     </div>
     <div id="fat">
-        <div style="text-align: center; display: table-cell; vertical-align: middle;">
+        <div class="box">
             <h1>Fats</h1>
             <br>
             <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
     </div>
     <div id="carbs">
-        <div style="text-align: center; display: table-cell; vertical-align: middle;">
+        <div class="box">
             <h1>Carbs</h1>
             <br>
             <p style="width: 70%; margin: auto;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
@@ -94,7 +94,7 @@
   <!--/////////////////////////// INFO SECTION //////////////////////////////-->
 
 <!--////////////////////////////// CONTACT FORM /////////////////////////////-->
-  <section>
+  <section class="contact-form" id="CF">
     <div class="container">
        <div class="card">
                 <div class="card-body">
@@ -322,10 +322,10 @@ $('#myModal').on('shown.bs.modal', function () {
                          <br>
                          <div class="row">
                              <div class="col-sm-4"></div>
-                                   <button id="recipeSearch" type="button" class="btn btn-primary col-sm-4" name="button" data-toggle="modal" data-target="#recipeResult">
+                                   <button id="recipeSearch" type="button" class="btn btn-primary col-sm-4" name="button" data-toggle="modal" data-target="#resultTwo">
                                      Search for Recipes
                                    </button>
-                                   <div class="modal fade" id="recipeResult">
+                                   <div class="modal fade" id="resultTwo">
                                      <div class="modal-dialog">
                                        <div class="modal-content">
                                          <div class="modal-header">
@@ -350,9 +350,8 @@ $('#myModal').on('shown.bs.modal', function () {
 
 
 <footer class="footer">
-    <ul class="nav">
-            <li class="nav__item"><a href="#" class="nav__link">Contact us!</a></li>
-    </ul>
+  <div class="nav__item"><a href="contact-form" class="nav__link">Contact us!</a></div>
+
     <p class="copyright">
         &copy; Copyright 2018
     </p>

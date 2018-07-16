@@ -43,7 +43,7 @@ mfp.fetchDateRange('Charoolz', '2018-01-15', '2018-07-01', ['calories', 'protein
 
   }
 
-  function dataTrain(arrayCalories,calorieLevel) { // function takes all calories and the level to look for 
+  function dataTrain(arrayCalories,calorieLevel) { // function takes all calories and the level to look for
     let whatIneed = [];
     // console.log(arrayCalories);
 

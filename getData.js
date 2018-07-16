@@ -310,27 +310,31 @@ function recipeSearch(){
         var APIKey = '&app_key=0ada957d3714df14b9602bc7869a6178';
         var applicationID = '&app_id=683d8f0f';
         var q = $("#recipeQuery").val();
-        var queryURL = 'https://api.edamam.com/api/food-database/parser?ingr=' + q +APIKey + applicationID;
+        var queryURL = 'https://api.edamam.com/api/food-database/parser?ingr=' + q +APIKey + "&from=0" + applicationID;
         $.ajax({
             url: queryURL,
             method: "GET"
             }).then(function(response) {
 
 
-           console.log(response.hints);
+           // console.log(response.hints);
            recipeArray = response.hints;
-            console.log(recipeArray);
+            // console.log(recipeArray);
 
             for (i=0; i < recipeArray.length; i++){
 
                 //var recipeName = recipeArray[i].food.label
-                console.log(recipeName)  // x axis
+                // console.log(recipeName)  // x axis
 
                 var recipeNutrients = recipeArray[i].food.nutrients // yaxis
                 //console.log(recipeNutrients);
 
-                document.getElementById("recipeResult").innerHTML = recipeNutrients;
-                console.log(recipeNutrients);
+                // document.getElementById("recipeResult").innerHTML = recipeNutrients;
+
+                console.log(recipeNutrients.ENERC_KCAL);
+
+                document.getElementById("recipeResult").innerHTML = Math.floor(recipeNutrients.ENERC_KCAL);
+
 
                 //$().append(recipeName);
                 //$().append(recipeNutrients);
@@ -344,3 +348,20 @@ function recipeSearch(){
         })
     })
 };
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////jquery-navbar//////////////////////////////////
+
+function apiRequest(array) {
+  let result;
+  let obj = array[0];
+  for (let key in obj) {
+    if (key === "food") {
+      let food = obj[key];
+      let data =  food[nutrient];
+      let result = data[ENERC_KCAL];
+    }
+    return result;
+  }
+}
+
+console.log(apiRequest(recipeNutrients));
