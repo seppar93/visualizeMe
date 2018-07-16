@@ -112,6 +112,19 @@ select {
 /**********************************************/
                   /* CANVAS */
 /**********************************************/
+.nueral-network {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 20px solid;
+  border-top: 1px solid;
+}
+
+
+
+
+/**********************************************/
+                  /* CANVAS */
+/**********************************************/
 .graph {
 border-style: solid;
 }

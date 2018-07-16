@@ -1,9 +1,9 @@
-
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////API DATA AND GRAPH/////////////////////////////
 // var foodName;
 // var foodNutrientValue;
 // let someStuff = Math.floor(profileData.trainedOuput.cal) * 100;
+document.getElementById("result").innerHTML = getNueralData(profileData);
 
 
 var nutrientLookup = nutrientSearch()
@@ -72,6 +72,14 @@ function getData(dataset,getFunction) {
   }
 }
 
+function getNueralData(dataset) {
+  for(let key in dataset) {
+    if (key === "trainedOuput") {
+      return dataset[key].cal;
+    }
+  }
+}
+// console.log(getNueralData(profileData));
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////INPUT FUNCTIONS////////////////////////////////
 

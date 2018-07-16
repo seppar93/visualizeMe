@@ -13,7 +13,7 @@ mfp.fetchDateRange('Charoolz', '2018-01-15', '2018-07-01', ['calories', 'protein
 
   let calories = getData(dataSet,getCalories)
   // console.log(dataTrain(calories,2000));
-  net.train(dataTrain(calories,2000));
+  net.train(dataTrain(calories,2500));
   var output = net.run({ calories: 1800});
   // console.log(output);
 
