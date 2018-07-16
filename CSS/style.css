@@ -44,7 +44,7 @@ p {
    background-size: cover;
    display: table;
    background-attachment: fixed;
-   background-image: url(CSS/images/calories.jpg);
+   background-image: url(/Users/sepehrparirokh/Desktop/visualizeMe/CSS/images/calories.jpg);
 }
 
 #carbs {
@@ -53,7 +53,7 @@ p {
    background-size: cover;
    display: table;
    background-attachment: fixed;
-   background-image: url(CSS/images/carbs.jpeg);
+   background-image: url(/Users/sepehrparirokh/Desktop/visualizeMe/CSS/images/carbs.jpeg);
 }
 
 #macros {
@@ -62,7 +62,7 @@ p {
    background-size: cover;
    display: table;
    background-attachment: fixed;
-   background-image: url(CSS/images/macros.jpeg);
+   background-image: url(/Users/sepehrparirokh/Desktop/visualizeMe/CSS/images/macros.jpeg);
 }
 
 #fat {
@@ -71,7 +71,7 @@ p {
    background-size: cover;
    display: table;
    background-attachment: fixed;
-   background-image: url(CSS/images/fats.jpeg);
+   background-image: url(/Users/sepehrparirokh/Desktop/visualizeMe/CSS/images/fats.jpeg);
 }
 
 select {
@@ -90,8 +90,10 @@ border-style: solid;
 }
 
 
-
-
+.container  {
+  padding-bottom: 12px;
+  padding-top: 20px;
+}
 
 
 
