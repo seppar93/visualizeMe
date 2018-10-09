@@ -10,10 +10,16 @@ Currently functional  but requiring updates to use Travis CI.
 ## Screenshots
 
 ### Artificial neural network
-Will be adding GIFs to display data.
+![](AI.gif)
+
+### Customizable Bar Graph
+![](macroBar.gif)
+
+### Customizable Pie Graph
+![](pieMacro.gif)
 
 ## Code style
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)]
+[js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)
 
 ## Tech/framework used
 
