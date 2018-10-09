@@ -7,7 +7,7 @@ I also wanted to be able to predict my future calorie intake to be able to see w
 ## Build status
 Currently functional  but requiring updates to use Travis CI.
 
-## Screenshots
+## Demonstration
 
 ### Artificial neural network
 ![](AI.gif)
