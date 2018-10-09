@@ -8,6 +8,8 @@ I also wanted to be able to predict my future calorie intake to be able to see w
 Currently functional  but requiring updates to use Travis CI.
 
 ## Screenshots
+
+### Artificial neural network
 Will be adding GIFs to display data.
 
 ## Code style
