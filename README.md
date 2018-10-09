@@ -19,7 +19,7 @@ Currently functional  but requiring updates to use Travis CI.
 ![](pieMacro.gif)
 
 ## Code style
-[js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)
+[![js-standard-style]](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)
 
 ## Tech/framework used
 
